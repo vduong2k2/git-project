@@ -29,5 +29,22 @@
         <button type="submit">Login</button>
       </form>
     </div>
+    <script>
+      function validateLogin(event) {
+        event.preventDefault(); // Ngăn chặn form submit mặc định
+
+        // Lấy giá trị từ ô nhập liệu
+        var username = document.getElementById("username").value;
+        var password = document.getElementById("password").value;
+
+        // Kiểm tra thông tin đăng nhập
+        if (username === "admin" && password === "admin") {
+          // Chuyển hướng qua trang đăng nhập thành công
+          window.location.href = "success.html";
+        } else {
+          alert("Đăng nhập không thành công. Vui lòng thử lại.");
+        }
+      }
+    </script>
   </body>
 </html>
